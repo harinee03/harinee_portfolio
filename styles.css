@@ -979,3 +979,130 @@ body {
   form .btn:hover {
     background-color: #0056b3;
   }
+
+/* Prevent Horizontal Overflow */
+body {
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.container {
+  max-width: 100%; /* Ensure container doesn't exceed screen width */
+  padding: 0 15px; /* Add some padding */
+}
+
+/* Ensure all sections are contained */
+section {
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Card Adjustments for Mobile */
+@media (max-width: 768px) {
+  .card, .internship-card, .project-card, .certification-card, .achievement-card, .interest-card {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px; /* Add spacing between stacked items */
+    padding: 15px; /* Add padding inside cards */
+  }
+
+  .card h3, .internship-card h3, .project-card h3, .certification-card h3, .achievement-card h3, .interest-card h3 {
+    font-size: 1.2rem; /* Smaller heading size */
+  }
+
+  .card p, .internship-card p, .project-card p, .certification-card p, .achievement-card p, .interest-card p {
+    font-size: 14px; /* Smaller font size */
+    line-height: 1.5; /* Improve readability */
+  }
+}
+/* Education Section Adjustments for Mobile */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 20px 0; /* Reduce padding */
+  }
+
+  .timeline::before {
+    left: 10px; /* Adjust timeline line position */
+  }
+
+  .timeline-item {
+    width: 100%; /* Full width for smaller screens */
+    margin-left: 30px; /* Add space for the timeline line */
+    padding: 10px; /* Add padding */
+  }
+
+  .timeline-item::before {
+    left: -5px; /* Adjust dot position */
+  }
+
+  .timeline-content {
+    padding: 15px; /* Add padding inside content */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem; /* Smaller heading size */
+  }
+
+  .timeline-content p {
+    font-size: 14px; /* Smaller font size */
+    line-height: 1.5; /* Improve readability */
+  }
+}
+/* Contact Form Adjustments for Mobile */
+@media (max-width: 768px) {
+  form {
+    width: 100%; /* Full width for smaller screens */
+    padding: 15px; /* Add padding */
+  }
+
+  .form-control {
+    font-size: 14px; /* Smaller font size for inputs */
+  }
+
+  .btn {
+    font-size: 14px; /* Smaller font size for buttons */
+  }
+}
+
+/* Typing Effect Adjustments for Mobile */
+@media (max-width: 768px) {
+  .typing-effect {
+    white-space: normal; /* Allow text to wrap */
+    border-right: none; /* Remove cursor */
+    animation: typing 6s steps(60, end); /* Keep typing animation */
+  }
+}
+/* Ensure Animations Work on Mobile */
+@media (max-width: 768px) {
+  .animate__animated {
+    animation-duration: 1s; /* Adjust animation duration */
+  }
+
+  .interest-card, .achievement-card {
+    animation: fadeInUp 0.5s ease-out forwards; /* Add fadeInUp animation */
+  }
+
+  .interest-icon, .achievement-icon {
+    animation: bounceIn 0.5s ease-out forwards; /* Add bounceIn animation */
+  }
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
