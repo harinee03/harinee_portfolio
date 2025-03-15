@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Snell Roundhand, cursive';
+ 
     background-color: #bcbcb46f;
     color: #333;
   }
@@ -980,6 +980,9 @@ body {
     background-color: #0056b3;
   }
 
+
+  
+
 /* Prevent Horizontal Overflow */
 body {
   overflow-x: hidden; /* Hide horizontal overflow */
@@ -1104,5 +1107,32 @@ section {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 100%; /* Ensure sections take full width */
+    padding: 20px 10px; /* Add padding for better spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word; /* Prevent text overflow */
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Smaller heading size */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 14px; /* Smaller paragraph text */
+    line-height: 1.5; /* Improve readability */
   }
 }
