@@ -1001,6 +1001,14 @@ section {
 
 /* Card Adjustments for Mobile */
 @media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .col-md-4, .col-md-6 {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px; /* Add spacing between stacked items */
+  }
   .card, .internship-card, .project-card, .certification-card, .achievement-card, .interest-card {
     width: 100%; /* Full width for smaller screens */
     margin-bottom: 20px; /* Add spacing between stacked items */
@@ -1071,6 +1079,7 @@ section {
     white-space: normal; /* Allow text to wrap */
     border-right: none; /* Remove cursor */
     animation: typing 6s steps(60, end); /* Keep typing animation */
+    width: 100%;
   }
 }
 /* Ensure Animations Work on Mobile */
@@ -1134,5 +1143,18 @@ section {
   p {
     font-size: 14px; /* Smaller paragraph text */
     line-height: 1.5; /* Improve readability */
+  }
+}
+.main-content {
+  margin-left: 250px; /* Default margin for larger screens */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Remove margin for smaller screens */
+    padding: 10px; /* Add some padding */
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
 }
