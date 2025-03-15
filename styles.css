@@ -779,6 +779,7 @@ body {
 }
 
   /* Achievements Section Styling */
+/* Achievements Section Styling */
 #achievements {
   border-top: 2px solid #4f6c8c;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -809,7 +810,7 @@ body {
 
 .achievement-icon {
   font-size: 3rem;
-  color:#4f6c8c;
+  color: #4f6c8c;
   margin-bottom: 20px;
   transition: transform 0.3s, color 0.3s;
 }
@@ -911,6 +912,21 @@ body {
 
 .interest-card {
   animation: bounceIn 0.5s ease-out forwards;
+}
+
+/* Enable Animations for Mobile */
+@media (max-width: 768px) {
+  .animate__animated {
+    animation-duration: 1s; /* Adjust animation duration */
+  }
+
+  .interest-card, .achievement-card {
+    animation: fadeInUp 0.5s ease-out forwards; /* Add fadeInUp animation */
+  }
+
+  .interest-icon, .achievement-icon {
+    animation: bounceIn 0.5s ease-out forwards; /* Add bounceIn animation */
+  }
 }
 
   /* Contact Form */
