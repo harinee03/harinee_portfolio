@@ -72,7 +72,35 @@ body {
   animation: typing 6s steps(60, end), blink-cursor 0.75s step-end infinite;
 }
 
+/* Typing Effect Adjustments for Mobile */
+@media (max-width: 768px) {
+  .typing-effect {
+    white-space: normal; /* Allow text to wrap */
+    border-right: none; /* Remove cursor */
+    animation: none; /* Disable typing animation */
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center-align text */
+  }
+}
 
+/* Typing Animation Keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust based on the number of characters */
+  }
+}
+
+@keyframes blink-cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
@@ -1089,15 +1117,7 @@ section {
   }
 }
 
-/* Typing Effect Adjustments for Mobile */
-@media (max-width: 768px) {
-  .typing-effect {
-    white-space: normal; /* Allow text to wrap */
-    border-right: none; /* Remove cursor */
-    animation: typing 6s steps(60, end); /* Keep typing animation */
-    width: 100%;
-  }
-}
+
 /* Ensure Animations Work on Mobile */
 @media (max-width: 768px) {
   .animate__animated {
@@ -1174,6 +1194,7 @@ section {
     overflow-x: hidden; /* Prevent horizontal overflow */
   }
 }
+
 /* Enable Animations for Mobile */
 @media (max-width: 768px) {
   .animate__animated {
