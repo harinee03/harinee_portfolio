@@ -1158,3 +1158,17 @@ section {
     overflow-x: hidden; /* Prevent horizontal overflow */
   }
 }
+/* Enable Animations for Mobile */
+@media (max-width: 768px) {
+  .animate__animated {
+    animation-duration: 1s; /* Adjust animation duration */
+  }
+
+  .interest-card, .achievement-card {
+    animation: fadeInUp 0.5s ease-out forwards; /* Add fadeInUp animation */
+  }
+
+  .interest-icon, .achievement-icon {
+    animation: bounceIn 0.5s ease-out forwards; /* Add bounceIn animation */
+  }
+}
