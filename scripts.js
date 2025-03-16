@@ -47,3 +47,17 @@ window.addEventListener('load', () => {
       alert('Please fill out all fields.');
     }
   });
+  // Scroll-to-Top Button
+  const scrollToTopButton = document.getElementById('scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
